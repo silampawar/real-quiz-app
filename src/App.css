@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  
+  background-image: "./bimage.jpg"
 }
 
 .App-logo {
@@ -10,7 +11,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100vh; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,4 +31,82 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.grid-container{
+  display: grid;
+  grid-template-columns:  repeat(12,auto);
+  grid-template-rows: repeat(12,5fr);
+  
+  
+}
+
+.header{
+  height: 50px;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  background-color: aliceblue;
+}
+
+.question_body{
+  
+  grid-column-start: 3;
+  grid-column-end: 11;
+  grid-row-start: 3;
+  grid-row-end: 11;
+  border-style: solid;
+  border-width:1px; 
+  border-radius: 25px;
+  background-color: aliceblue;
+  opacity: 0.7;
+  
+}
+
+.question_lable{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  z-index:1;
+  
+}
+
+.question_detail{
+  grid-column-start: 4;
+  grid-column-end: 10;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  color:black;
+  font-size: 15px;
+  z-index:1;
+  border-radius: 25px;
+  background-color: aliceblue;
+  opacity: 0.7;
+  display: flex;
+  padding-left:20px;
+  align-items: center;
+}
+
+.options{
+  grid-column: 4 / 10;
+  grid-row: 6 / span 4;
+  z-index: 1;
+  border-radius: 25px;
+  background-color: aliceblue;
+  opacity: 0.7;
+}
+
+.option{
+  padding:15px;
+}
+
+.form_buttons{
+  grid-column: 6 / 8;
+  grid-row: 9 / 10;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
